@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F6F9FC;
+}
+
+.sidebar-menu{
+    width: 220px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: #177FEB;
+    overflow: auto;
+    scrollbar-color: #DEE2EE #177FEB;
+    scrollbar-width: thin;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar-menu li a{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    height: 50px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 35px;
+}
+
+.sidebar-menu li a:hover{
+    background-color: #fff;    
+    color: #177FEB;
+}
+
+.sidebar-menu li span{
+    padding-left: 1.2rem;
+    display: inline-block;
+}
+
+main {
+    position: relative;
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    min-height: 100vh;
+    padding-bottom: 5rem;
+}
+
+main header {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+    background-color: #177FEB;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main header .date{
+    font-size: 15px;
+    color: #fff;
+    display: inline-block;
+}
+
+main header button{
+    width: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #F8817B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.content {
+    padding: 2rem;
+    background-color: #F6F9FC;
+}
+
+.content h3{
+    color: #202020;
+    font-family: 'Raleway', sans-serif;
+}
+
+.head-list {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+}
+
+.setting-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dropdown {
+    padding: 12px;
+    width: 160px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #DEE2EE;
+    margin-right: 1rem;
+    position: relative;
+    background-color: #F6F9FC;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
+.dropdown span {
+    color: #202020;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.dropdown i{
+    float: right;
+    margin-top: 2px;
+    transition: all .3s linear;
+}
+
+.dropdown:hover i{
+    transform: rotate(-180deg)
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 45px;
+    font-size: 14px;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    border-radius: 8px;
+    transition: all .3s linear;
+    background-color: #F6F9FC;
+    border: 1px solid #DEE2EE;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a{
+    height: 35px;
+    line-height: 35px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    color: #202020;
+}
+
+.dropdown-content a:hover{
+    background-color: #fff;
+}
+
+.search-with-text {
+    width: 245px;
+    height: 45px;
+    position: relative;
+}
+
+.search-with-text input{
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    border: 1px solid #DEE2EE;
+    border-radius: 8px;
+    outline: none;
+    background-color: #F6F9FC;
+}
+
+.search-with-text input:focus{
+    border: 2px solid #DEE2EE;
+}
+
+.search-with-text i{
+    position: absolute;
+    color: #8894A9;
+    top: 14px;
+    right: 12px;
+    z-index: 33;
+}
+
+.download-link {
+    color: #F8817B;
+    min-width: 120px;
+    font-size: 14px;
+}
+
+.download-link i{
+    margin-right: 6px;
+    display: inline-block;
+    transform: scale(1.5)
+}
+
+.activity-table {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+table {
+    height: auto;
+    width: 100%;
+    color: #202020;
+    border-radius: 20px;
+    border: 1px solid #DDDDDD;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+table thead th{
+    font-size: 14px;
+    text-align: left;
+}
+
+table thead tr{
+    background-color: #fff;
+}
+
+tr {
+    height: 90px;
+}
+@media only screen and (min-width: 1070px){
+  table tbody tr:nth-child(even){
+    background: #fff;
+ }  
+}
+
+
+table thead tr th:first-child, table tbody tr td:first-child{
+    text-align: center;
+    width: 80px;
+}
+
+.icon-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.date-item span{
+    display: block;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.date-item span:first-child{
+    font-size: 15px;
+    color: #177FEB;
+    font-family: 'Raleway', sans-serif;
+}
+
+.name-img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    float: left;
+    margin-right: 10px;
+}
+
+.name-img span{
+    display: block;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.name-img span:nth-child(2){
+    font-size: 14px;
+    color: #177FEB;
+}
+
+.type {
+    font-size: 14px;
+    color: #177FEB;
+}
+
+.activity {
+    font-size: 14px;
+    max-width: 70px;
+    padding-right: 30px;
+}
+
+.activity a{
+    color: #177FEB;
+}
+
+.action span{
+    font-size: 14px;
+    color: #202020;
+}
+
+.action i{
+    transform: scale(1.5);
+    color: #F8817B;
+    margin-right: 4px;
+}
+
+.btn-pagination {
+    margin-top: 2rem;
+    float: right;
+    display: flex;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-pagination > a {
+    display: inline-block;
+    color: #8894A9;
+    margin: 4px 8px;
+}
+
+.btn-pagination > i {
+    transform: scale(1.5);
+    margin: 8px;
+    color: #8894A9;
+}
+
+.btn-pagination ul li{
+    display: inline-block;
+    text-align: center;
+    line-height: 17px;
+    width: 22px;
+    height: 22px;
+    margin: 2px 4px;
+    background-color: #fff;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+}
+
+.btn-pagination ul li:first-child{
+    background-color: #177FEB;
+}
+
+.btn-pagination ul li:first-child a{
+    color: #fff;
+}
+
+.btn-pagination ul li a{
+    color: #8894A9;
+    font-size: 12px
+}
+
+@media only screen and (max-width: 1070px){
+    .dropdown {
+        margin-top: 10px;
+    }
+
+    .setting-list {
+        flex-wrap: wrap-reverse;
+    }
+
+    .sidebar-menu li a{
+        padding-left: 18px;
+    }
+
+    .sidebar-menu {
+       width: 50px;
+    }
+
+    .sidebar-menu:hover {
+        width: 220px;
+    }
+
+    .sidebar-menu:hover li a{
+        padding-left: 35px
+    }
+
+    main {
+        width: calc(100% - 50px);
+        margin-left: 50px
+    }
+
+    main header{
+        padding: 0 1.5rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    table thead {
+        display: none
+    }
+
+    table tbody tr {
+        height: auto;
+    }
+
+    table tbody tr td{
+        padding-right: 70px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    table tr td:first-child .icon-box{
+        display: none;
+    }
+
+    table tbody tr{
+        padding-bottom: 70px;
+    }
+
+    table tbody tr td:nth-child(even){
+        background-color: #fff;
+    }
+
+    table tbody tr td:nth-child(2)::before {
+        content: "Date";
+        display: inline-block;
+        font-size: 18px;
+        position: absolute;
+        top: 32px;
+        left: 10px;
+    }
+
+    table tbody tr td:nth-child(3)::before {
+        content: "Name";
+        display: inline-block;
+        font-size: 18px;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+
+    table tbody tr td:nth-child(4)::before {
+        content: "Type";
+        display: inline-block;
+        font-size: 18px;
+        color: #202020;
+        position: absolute;
+        top: 25px;
+        left: 10px;
+    } 
+
+    table tbody tr td:nth-child(5)::before {
+        content: "Activity";
+        display: inline-block;
+        font-size: 18px;
+        position: absolute;
+        top: 33px;
+        left: 10px;
+    }
+
+    table tbody tr td:nth-child(6)::before {
+        content: "Action";
+        display: inline-block;
+        font-size: 18px;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+    }
+
+    table tbody tr td::before{
+        margin-left: 2rem;
+    }
+
+    table, table tbody, table tr, table td{
+        display: block;
+        width: 100%;
+    }
+
+    .date-item{
+        display: flex;
+        padding: 1.5rem 0;
+    }
+
+    .date-item span{
+        margin-right: 15px;
+    }
+
+    .name-img{
+        padding: 2rem 0;
+        display: flex;
+    }
+
+    .name-img div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name-img span{
+        display: block;
+        margin: 3px 0;
+    }
+
+    .activity {
+        text-align: right;
+        max-width: 100%;
+        padding: 2rem 60px;
+    }
+
+    .type {
+        padding: 2rem 5rem;
+    }
+
+    .action{
+        margin: 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .head-list {
+        flex-direction: column;
+    }
+
+    .download-link{
+        margin-top: 1.5rem
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    main header{
+        padding: 0 1rem;
+    }
+    
+    main header .date{
+        font-size: 13px;
+    }
+
+    main header button{
+        width: 70px;
+        font-size: 12px;
+        padding: 10px 3px;
+    }
+
+    table tbody tr td::before{
+        margin-left: 0;
+        font-size: 16px !important;
+    }
+
+    table tbody tr td{
+        padding-right: 20px;
+    }
+
+    .type {
+        padding: 2rem 2rem;
+    }
+
+    .activity{ 
+        padding: 2rem 20px;
+    }
+
+    .btn-pagination ul li{
+        margin: 1px 3px;
+    }
+    .btn-pagination > a {
+        margin: 4px;
+    }
+}
